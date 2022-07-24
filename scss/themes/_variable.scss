@@ -1,0 +1,93 @@
+//----------bg:css cho màu background-----------
+$bg-c1-primary: #b61984;
+$bg-c1-light: #fff;
+$bg-c2-primary: #dcd1f0;
+$bg-transparent: rgba(0, 0, 0, 0);
+$bg-none: none;
+
+//-----------text: css cho text----------
+//TEXT-COLOR
+//---------text: chữ || c1: c là color, 1 là số thứ tự || primary: màu chủ đạo
+$text-c1-primary: #b61984;
+$text-c1-dark: #181818;
+$text-c1-light: #fff;
+//TEXT-SIZE
+$text-card-1: 11.25px;
+$text-card-2: 23.25px;
+$text-card-3: 15px;
+$text-xs: 13px;
+$text-base: 16px;
+$text-xl: 18px;
+$text-2xl: 20px;
+$text-3xl: 30px;
+$text-4xl: 40px;
+$text-5xl: 50px;
+$text-6xl: 60px;
+$text-7xl: 70px;
+//TEXT-FONT-WEIGHT
+$text-light: 300;
+$text-regular: 400;
+$text-semibold: 600;
+$text-bold: 700;
+//TEXT-ALGIN
+$align-center: center;
+//PADDING
+$pd-regular: 10px 25px;
+$pd-card: 15px 15px;
+//BORDER
+$bd-light-purple: 1px solid #b61984;
+$bd-light-blue: 2px solid #2a73dd;
+$bd-light-white: 2px solid #fff;
+$bd-none: none;
+//BORDER RADIUS
+$br-medium: 5px;
+$br-large: 10px;
+$br-card-bottom: 0 0 10px 10px;
+$br-card-top: 10px 10px 0 0;
+//------------IMAGE CSS-----------
+//CARD-IMAGE
+$width-def: 100%;
+$height-def: auto;
+
+
+
+
+/*---------------mixin------------*/
+
+@mixin text($fs: $text-base, $fw: $text-regular, $c: $text-c1-dark, ) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $c;
+}
+
+@mixin button($fs, $fw, $fc, $bg, $pd, $bd, $br, $bg-hover, $c-hover) {
+    //font-size:16px;
+    //font-weight: 600;
+    //color:#000;
+    @include text ($fs, $fw, $fc);
+    background: $bg;
+    padding: $pd;
+    border: $bd;
+    border-radius: $br;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $bg-hover;
+        color: $c-hover;
+    }
+
+}
+
+@mixin card_bottom($bg, $bd, $br, $pd, $align) {
+    background-color: $bg;
+    border: $bd;
+    border-radius: $br;
+    padding: $pd;
+    text-align: $align;
+}
+
+@mixin card_top($br, $width, $height) {
+    border-radius: $br;
+    max-width: $width;
+    height: $height;
+}

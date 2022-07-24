@@ -1,0 +1,5 @@
+@import '../../themes/variable';
+
+.btn {
+    @include button($text-base, $text-base, $text-c1-dark, #EEE, 15px, none, 15px, #EEE, $text-c1-dark);
+}

@@ -1,0 +1,217 @@
+@import './base/base';
+@import './themes/variable';
+//nesting css
+
+section.top {
+    background: url(../../img/yellow_top_wave_01.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .top_wrapper {
+
+        .header {
+            max-width: 1260px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+
+            .logo {
+                a {
+                    img {
+                        margin-top: 0;
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+
+            nav {
+                margin-left: 170px;
+
+                a {
+                    text-decoration: none;
+                    line-height: 80px;
+                    margin-right: 50px;
+
+                    span {
+                        @include text($text-xs, $text-bold, $text-c1-dark);
+                    }
+
+                    &:hover {
+                        span {
+                            color: $text-c1-primary;
+                        }
+                    }
+                }
+            }
+
+            .contact_channel {
+                margin-left: 50px;
+                margin-right: 0;
+
+                .contact_inner {
+                    display: flex;
+                    align-items: center;
+
+                    button {
+                        // @include button($text-xs, $text-semibold, $text-c1-light, $bg-c1-primary, $pd-regular, $bd-light-purple, $br-curve, $bg-c1-light, $text-c1-primary);
+                        background-color: $bg-c1-primary;
+                        padding: 10px 25px;
+                        border: none;
+                        border-radius: 30px;
+                        cursor: pointer;
+                        font-weight: $text-semibold;
+                        margin-right: 10px;
+                        transition: all 300ms ease-in-out;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-decoration: none;
+
+                            .btn_icon {
+                                span {
+                                    color: $text-c1-light;
+                                    margin-right: 10px;
+                                    font-size: $text-xs;
+                                }
+                            }
+
+                            .btn_text {
+                                color: $text-c1-light;
+                                font-size: $text-xs;
+                            }
+                        }
+
+                        &:hover {
+                            background-color: $bg-c1-light;
+                            border: 1px solid #b61984;
+
+                            a {
+                                span {
+                                    color: #b61984;
+                                }
+                            }
+                        }
+                    }
+
+                    //icon social media
+                    a {
+                        margin-left: 10px;
+                        color: $text-c1-dark;
+
+                        &:hover {
+                            span {
+                                color: $text-c1-primary;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+
+        .about {
+            height: 660px;
+            background-color: transparent;
+            background-image: url(../img/Violet_top_left_wave.png);
+            background-repeat: no-repeat;
+            background-position-y: 450px;
+            background-size: contain;
+
+            .about_inner {
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                .about_left {
+                    .first_title {
+                        @include text($text-xl, $text-bold, $text-c1-primary);
+                    }
+
+                    .second_title {
+                        @include text($text-6xl, $text-bold, $text-c1-dark);
+                        margin-top: 1rem;
+                    }
+
+                }
+
+                .about_right {
+                    img {
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+
+
+    }
+
+}
+
+//------------SECTION HUMAN---------
+section.human {
+    background: $bg-c2-primary;
+    padding: 50px 0 100px 0;
+    background-image: url(../img/Wave_White_bottom_right_shape_01.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 470px;
+
+    .container {
+        .human_content {
+            .row {
+                margin-bottom: 30px;
+
+                .teacher {
+                    .card {
+                        background-color: transparent;
+                        border: $bd-none;
+
+                        .card_top {
+                            img {
+                                @include card_top($br-card-top, $width-def, $height-def);
+                                opacity: 1;
+                                transition: transform 0.5s ease;
+                                display: block;
+                                cursor: pointer;
+                            }
+
+                            &.zoom {
+                                position: relative;
+                                overflow: hidden;
+                            }
+
+                            &:hover img {
+                                transform: scale(1.1);
+                            }
+                        }
+
+                        .card_bottom {
+                            @include card_bottom($bg-c1-light, $bd-none, $br-card-bottom, $pd-card, $align-center);
+
+                            span {
+                                @include text($text-card-1, $text-bold, $text-c1-primary);
+                            }
+
+                            h3 {
+                                @include text($text-card-2, $text-bold, $text-c1-dark);
+                                margin-bottom: 15px;
+                            }
+
+                            p {
+                                @include text($text-card-3, $text-base, $text-c1-dark);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
