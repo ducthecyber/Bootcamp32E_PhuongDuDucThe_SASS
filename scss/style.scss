@@ -1,6 +1,20 @@
 @import './base/base';
 @import './themes/variable';
+
 //nesting css
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $bg-c1-light;
+    z-index: 99;
+    width: 100%;
+}
+
+/* Page content */
+.content {
+    padding: 0;
+}
 
 section.top {
     background: url(../../img/yellow_top_wave_01.png);
@@ -15,6 +29,7 @@ section.top {
             margin: auto;
             display: flex;
             align-items: center;
+            height: 100px;
 
             .logo {
                 a {
@@ -116,12 +131,13 @@ section.top {
 
 
         .about {
-            height: 660px;
+
             background-color: transparent;
             background-image: url(../img/Violet_top_left_wave.png);
             background-repeat: no-repeat;
-            background-position-y: 450px;
+            background-position-y: bottom;
             background-size: contain;
+            padding-bottom: 60px;
 
             .about_inner {
                 margin: auto;
@@ -162,7 +178,8 @@ section.human {
     background-image: url(../img/Wave_White_bottom_right_shape_01.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position-y: 470px;
+    background-position-y: bottom;
+    padding-bottom: 20px;
 
     .container {
         .human_content {
@@ -175,12 +192,18 @@ section.human {
                         border: $bd-none;
 
                         .card_top {
+                            border-radius: $br-card-top;
+
                             img {
                                 @include card_top($br-card-top, $width-def, $height-def);
                                 opacity: 1;
                                 transition: transform 0.5s ease;
                                 display: block;
                                 cursor: pointer;
+
+                                &:hover {
+                                    transform: scale(1.1);
+                                }
                             }
 
                             &.zoom {
@@ -188,9 +211,6 @@ section.human {
                                 overflow: hidden;
                             }
 
-                            &:hover img {
-                                transform: scale(1.1);
-                            }
                         }
 
                         .card_bottom {
@@ -207,6 +227,174 @@ section.human {
 
                             p {
                                 @include text($text-card-3, $text-base, $text-c1-dark);
+                            }
+                        }
+
+                        &:hover {
+                            box-shadow: 1px 14px 16px -2px rgba(92, 74, 74, 0.75);
+                            -webkit-box-shadow: 1px 14px 16px -2px rgba(92, 74, 74, 0.75);
+                            -moz-box-shadow: 1px 14px 16px -2px rgba(92, 74, 74, 0.75);
+                            transition: all 0.3s ease-in;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//-------------SUBMIT------------
+section.submit {
+    background: url(../img/accent_bottom_wave_01.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    .container {
+        position: relative;
+
+        .submit_content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            .submit_left {
+                width: 50%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .submit_right {
+                width: 50%;
+
+                .form {
+                    @include submit($bg-c1-light, $bd-none, $br-large, $pd-submit);
+                    box-shadow: 3px -1px 25px 6px rgba(106, 111, 143, 0.26);
+                    -webkit-box-shadow: 3px -1px 25px 6px rgba(106, 111, 143, 0.26);
+                    -moz-box-shadow: 3px -1px 25px 6px rgba(106, 111, 143, 0.26);
+
+                    .form_title {
+                        span {
+                            @include text($text-5xl, $text-bold, $text-c1-dark);
+                            display: block;
+                            text-align: center;
+                        }
+                    }
+
+                    .form_input {
+                        padding: 15px 0 15px 0;
+
+                        .contact_row {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin-bottom: 1rem;
+
+                            .name {
+
+                                .btn_name {
+                                    max-width: 97%;
+                                    padding-right: 1rem;
+                                    display: flex;
+                                    align-items: center;
+                                    @include submit($bg-c1-light, $bd-light-gray, $br-input, $pd-card);
+
+                                    span {
+                                        color: $text-c1-primary;
+                                    }
+
+                                    input {
+                                        margin-left: 5px;
+                                        border: none;
+                                        width: 100%;
+                                        padding-right: 5px;
+                                    }
+
+                                }
+                            }
+
+                            .email {
+                                .btn_email {
+                                    @include submit($bg-c1-light, $bd-light-gray, $br-input, $pd-card);
+                                    max-width: 100%;
+                                    margin-left: 5px;
+                                    display: flex;
+                                    align-items: center;
+
+                                    span {
+                                        color: $text-c1-primary;
+                                    }
+
+                                    input {
+                                        margin-left: 5px;
+                                        border: none;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+
+                        .option {
+                            @include submit($bg-c1-light, $bd-light-gray, $br-input, $pd-card);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-bottom: 1rem;
+
+                            span.fa-solid {
+                                width: 5%;
+                                color: $text-c1-primary;
+                            }
+
+                            span.course {
+                                width: 95%;
+
+                                select {
+                                    border: none;
+                                    width: 100%;
+
+                                    option {}
+                                }
+                            }
+                        }
+
+                        .message {
+                            .contact_message {
+                                @include submit($bg-c1-light, $bd-light-gray, $br-input, 10px 20px 10px 20px);
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 1rem;
+
+                                span {
+                                    color: $text-c1-primary;
+                                    width: 5%;
+                                    margin-bottom: 14rem;
+                                }
+
+                                .text {
+                                    textarea {
+                                        width: 100%;
+                                        @include submit($bg-c1-light, none, $br-input, 5px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .btn_contact {
+                        max-width: 100% !important;
+
+                        button {
+                            @include button($text-base, $text-base, $text-c1-light, $bg-c1-primary, 10px 50px, $bd-none, $br-input, $bg-c1-light, $text-c1-primary);
+
+                            &:hover {
+                                border: $bd-light-purple;
+                                transition: all 300ms ease-in-out;
                             }
                         }
                     }

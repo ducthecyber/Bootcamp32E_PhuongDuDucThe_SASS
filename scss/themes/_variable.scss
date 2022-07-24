@@ -34,14 +34,17 @@ $align-center: center;
 //PADDING
 $pd-regular: 10px 25px;
 $pd-card: 15px 15px;
+$pd-submit: 30px 20px;
+$pd-message: 10px 20px 60px 20px;
 //BORDER
 $bd-light-purple: 1px solid #b61984;
-$bd-light-blue: 2px solid #2a73dd;
-$bd-light-white: 2px solid #fff;
+$bd-light-gray: 1px solid #e5e5e5;
+$bd-light-white: 1px solid #fff;
 $bd-none: none;
 //BORDER RADIUS
 $br-medium: 5px;
 $br-large: 10px;
+$br-input: 30px;
 $br-card-bottom: 0 0 10px 10px;
 $br-card-top: 10px 10px 0 0;
 //------------IMAGE CSS-----------
@@ -90,4 +93,11 @@ $height-def: auto;
     border-radius: $br;
     max-width: $width;
     height: $height;
+}
+
+@mixin submit($bg, $bd, $br, $pd) {
+    background-color: $bg;
+    border: $bd;
+    border-radius: $br;
+    padding: $pd;
 }

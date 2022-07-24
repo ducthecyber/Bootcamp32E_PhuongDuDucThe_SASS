@@ -27,62 +27,64 @@
 <body>
   <section class="top">
     <div class="top_wrapper">
-      <div class="header">
-        <div class="logo">
-          <a href="#">
-            <img src="./img/crest.png" alt="" />
-          </a>
-        </div>
-        <nav class="navbar">
-          <a href="#">
-            <span>Home</span>
-          </a>
+      <div id="myHeader">
+        <div class="header">
+          <div class="logo">
+            <a href="#">
+              <img src="./img/crest.png" alt="" />
+            </a>
+          </div>
+          <nav class="navbar">
+            <a href="#">
+              <span>Home</span>
+            </a>
 
-          <a href="#">
-            <span>About</span>
-          </a>
+            <a href="#">
+              <span>About</span>
+            </a>
 
-          <a href="#">
-            <span>Courses</span>
-          </a>
+            <a href="#">
+              <span>Courses</span>
+            </a>
 
-          <a href="#">
-            <span>Blog</span>
-          </a>
+            <a href="#">
+              <span>Blog</span>
+            </a>
 
-          <a href="#">
-            <span>Shop</span>
-          </a>
+            <a href="#">
+              <span>Shop</span>
+            </a>
 
-          <a href="#">
-            <span>Elements</span>
-          </a>
+            <a href="#">
+              <span>Elements</span>
+            </a>
 
-        </nav>
-        <div class="contact_channel">
-          <div class="contact_inner">
-            <button class="btn_phone">
-              <a href="#">
-                <div class="btn_icon">
-                  <span class="fa-solid fa-phone-flip"></span>
-                </div>
-                <span class="btn_text">
-                  (+1) 555 234-8765
-                </span>
+          </nav>
+          <div class="contact_channel">
+            <div class="contact_inner">
+              <button class="btn_phone">
+                <a href="#">
+                  <div class="btn_icon">
+                    <span class="fa-solid fa-phone-flip"></span>
+                  </div>
+                  <span class="btn_text">
+                    (+1) 555 234-8765
+                  </span>
+                </a>
+              </button>
+              <a href="https://twitter.com/bold_themes">
+                <span class="fa-brands fa-twitter"></span>
               </a>
-            </button>
-            <a href="https://twitter.com/bold_themes">
-              <span class="fa-brands fa-twitter"></span>
-            </a>
-            <a href="https://www.facebook.com/boldthemes/">
-              <span class="fa-brands fa-facebook-f"></span>
-            </a>
-            <a href="https://www.youtube.com/channel/UCPL5LgX32KsbQ1i9nV-xiKA">
-              <span class="fa-brands fa-youtube"></span>
-            </a>
-            <a href="https://business.instagram.com/">
-              <span class="fa-brands fa-instagram"></span>
-            </a>
+              <a href="https://www.facebook.com/boldthemes/">
+                <span class="fa-brands fa-facebook-f"></span>
+              </a>
+              <a href="https://www.youtube.com/channel/UCPL5LgX32KsbQ1i9nV-xiKA">
+                <span class="fa-brands fa-youtube"></span>
+              </a>
+              <a href="https://business.instagram.com/">
+                <span class="fa-brands fa-instagram"></span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -209,6 +211,56 @@
   </section>
   <section class="submit">
     <div class="container">
+      <div class="submit_content">
+        <div class="submit_left">
+          <img src="./img/conatct_inner.png" alt="" />
+        </div>
+        <div class="submit_right">
+          <div class="form">
+            <div class="form_title">
+              <span>Find Your Course</span>
+            </div>
+            <div class="form_input">
+              <div class="contact_row">
+                <div class="name">
+                  <div class="btn_name">
+                    <span class="fa-solid fa-user"></span>
+                    <input type="text" placeholder="Name">
+                  </div>
+                </div>
+                <div class="email">
+                  <div class="btn_email">
+                    <span class="fa-solid fa-envelope"></span>
+                    <input type="text" placeholder="Email">
+                  </div>
+                </div>
+              </div>
+              <div class="option">
+                <span class="fa-solid fa-graduation-cap"></span>
+                <span class="course">
+                  <select name="" id="course_option">
+                    <option value="English">English</option>
+                    <option value="French">French</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="German">German</option>
+                  </select>
+                </span>
+              </div>
+              <div class="message">
+                <div class="contact_message">
+                  <span class="fa-solid fa-message"></span>
+                  <div class="text">
+                    <textarea name="" id="" cols="55" rows="10" placeholder="Message"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn_contact">
+              <button>SEND</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <section class="contact">
@@ -228,6 +280,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script src="./js/controllers/index.js"></script>
 </body>
 
 </html>
