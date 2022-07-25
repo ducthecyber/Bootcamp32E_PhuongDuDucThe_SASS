@@ -32,43 +32,135 @@ section.top {
   background-repeat: no-repeat;
   background-size: contain;
 }
-section.top .top_wrapper .header {
+@media only screen and (max-width: 1232px) {
+  section.top .top_wrapper .top_nav {
+    display: block;
+    background-color: #fff;
+  }
+  section.top .top_wrapper .top_nav .menu-trigger {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+  }
+  section.top .top_wrapper .top_nav .menu-trigger .menu-icon {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  section.top .top_wrapper .top_nav .menu-trigger .menu-icon a img:hover {
+    cursor: pointer;
+  }
+  section.top .top_wrapper .top_nav .myLinks {
+    display: none;
+  }
+  section.top .top_wrapper .top_nav .myLinks .Links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    padding-bottom: 100%;
+    box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.16);
+  }
+  section.top .top_wrapper .top_nav .myLinks .Links img {
+    margin-right: 0.5rem;
+  }
+  section.top .top_wrapper .top_nav .myLinks .Links nav {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  section.top .top_wrapper .top_nav .myLinks .Links nav a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 16px;
+    color: #181818;
+  }
+  section.top .top_wrapper .top_nav .myLinks .Links .menu-bar .btnTrigger {
+    margin-bottom: 0.5rem;
+  }
+  section.top .top_wrapper .top_nav .myLinks .Links .menu-bar .btnTrigger button {
+    background-color: #b61984;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: all 300ms ease-in-out;
+  }
+  section.top .top_wrapper .top_nav .myLinks .Links .menu-bar .btnTrigger button a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  section.top .top_wrapper .top_nav .myLinks .Links .menu-bar .btnTrigger button a .btn_icon span {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 13px;
+  }
+  section.top .top_wrapper .top_nav .myLinks .Links .menu-bar .btnTrigger button a .btn_text {
+    color: #fff;
+    font-size: 13px;
+  }
+  section.top .top_wrapper .top_nav .myLinks .Links .menu-bar a {
+    margin-left: 1.75rem;
+  }
+  section.top .top_wrapper .top_nav .myLinks .Links .menu-bar a span {
+    font-size: 13px;
+    font-weight: 16px;
+    color: #181818;
+  }
+  section.top .top_wrapper #myHeader {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1233px) {
+  section.top .top_wrapper .top_nav {
+    display: none;
+  }
+  section.top .top_wrapper #myHeader {
+    display: block;
+  }
+}
+section.top .top_wrapper #myHeader .header {
   max-width: 1260px;
   margin: auto;
   display: flex;
   align-items: center;
   height: 100px;
 }
-section.top .top_wrapper .header .logo a img {
+section.top .top_wrapper #myHeader .header .logo a img {
   margin-top: 0;
   width: 100px;
   height: 100px;
 }
-section.top .top_wrapper .header nav {
+section.top .top_wrapper #myHeader .header nav {
   margin-left: 170px;
 }
-section.top .top_wrapper .header nav a {
+section.top .top_wrapper #myHeader .header nav a {
   text-decoration: none;
   line-height: 80px;
   margin-right: 50px;
 }
-section.top .top_wrapper .header nav a span {
+section.top .top_wrapper #myHeader .header nav a span {
   font-size: 13px;
   font-weight: 700;
   color: #181818;
 }
-section.top .top_wrapper .header nav a:hover span {
+section.top .top_wrapper #myHeader .header nav a:hover span {
   color: #b61984;
 }
-section.top .top_wrapper .header .contact_channel {
+section.top .top_wrapper #myHeader .header .contact_channel {
   margin-left: 50px;
   margin-right: 0;
 }
-section.top .top_wrapper .header .contact_channel .contact_inner {
+section.top .top_wrapper #myHeader .header .contact_channel .contact_inner {
   display: flex;
   align-items: center;
 }
-section.top .top_wrapper .header .contact_channel .contact_inner button {
+section.top .top_wrapper #myHeader .header .contact_channel .contact_inner button {
   background-color: #b61984;
   padding: 10px 25px;
   border: none;
@@ -78,33 +170,33 @@ section.top .top_wrapper .header .contact_channel .contact_inner button {
   margin-right: 10px;
   transition: all 300ms ease-in-out;
 }
-section.top .top_wrapper .header .contact_channel .contact_inner button a {
+section.top .top_wrapper #myHeader .header .contact_channel .contact_inner button a {
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
 }
-section.top .top_wrapper .header .contact_channel .contact_inner button a .btn_icon span {
+section.top .top_wrapper #myHeader .header .contact_channel .contact_inner button a .btn_icon span {
   color: #fff;
   margin-right: 10px;
   font-size: 13px;
 }
-section.top .top_wrapper .header .contact_channel .contact_inner button a .btn_text {
+section.top .top_wrapper #myHeader .header .contact_channel .contact_inner button a .btn_text {
   color: #fff;
   font-size: 13px;
 }
-section.top .top_wrapper .header .contact_channel .contact_inner button:hover {
+section.top .top_wrapper #myHeader .header .contact_channel .contact_inner button:hover {
   background-color: #fff;
   border: 1px solid #b61984;
 }
-section.top .top_wrapper .header .contact_channel .contact_inner button:hover a span {
+section.top .top_wrapper #myHeader .header .contact_channel .contact_inner button:hover a span {
   color: #b61984;
 }
-section.top .top_wrapper .header .contact_channel .contact_inner a {
+section.top .top_wrapper #myHeader .header .contact_channel .contact_inner a {
   margin-left: 10px;
   color: #181818;
 }
-section.top .top_wrapper .header .contact_channel .contact_inner a:hover span {
+section.top .top_wrapper #myHeader .header .contact_channel .contact_inner a:hover span {
   color: #b61984;
 }
 section.top .top_wrapper .about {
@@ -147,6 +239,22 @@ section.human {
 }
 section.human .container .human_content .row {
   margin-bottom: 30px;
+}
+section.human .container .human_content .row .item-1 {
+  animation: fadeIn 2s;
+  transition: all 1s ease;
+}
+section.human .container .human_content .row .item-2 {
+  animation: fadeIn 4s;
+  transition: all 1s ease;
+}
+section.human .container .human_content .row .item-3 {
+  animation: fadeIn 6s;
+  transition: all 1s ease;
+}
+section.human .container .human_content .row .item-4 {
+  animation: fadeIn 8s;
+  transition: all 1s ease;
 }
 section.human .container .human_content .row .teacher .card {
   background-color: transparent;
@@ -219,14 +327,8 @@ section.submit .container .submit_content {
   justify-content: center;
   width: 100%;
 }
-section.submit .container .submit_content .submit_left {
-  width: 50%;
-}
 section.submit .container .submit_content .submit_left img {
   width: 100%;
-}
-section.submit .container .submit_content .submit_right {
-  width: 50%;
 }
 section.submit .container .submit_content .submit_right .form {
   background-color: #fff;
@@ -271,6 +373,7 @@ section.submit .container .submit_content .submit_right .form .form_input .conta
   border: none;
   width: 100%;
   padding-right: 5px;
+  outline: none;
 }
 section.submit .container .submit_content .submit_right .form .form_input .contact_row .email .btn_email {
   background-color: #fff;
@@ -289,6 +392,7 @@ section.submit .container .submit_content .submit_right .form .form_input .conta
   margin-left: 5px;
   border: none;
   width: 100%;
+  outline: none;
 }
 section.submit .container .submit_content .submit_right .form .form_input .option {
   background-color: #fff;
@@ -308,8 +412,13 @@ section.submit .container .submit_content .submit_right .form .form_input .optio
   width: 95%;
 }
 section.submit .container .submit_content .submit_right .form .form_input .option span.course select {
+  margin-left: 5px;
   border: none;
+  outline: none;
   width: 100%;
+}
+section.submit .container .submit_content .submit_right .form .form_input .option span.course select option {
+  outline: none;
 }
 section.submit .container .submit_content .submit_right .form .form_input .message .contact_message {
   background-color: #fff;
@@ -326,6 +435,7 @@ section.submit .container .submit_content .submit_right .form .form_input .messa
   margin-bottom: 14rem;
 }
 section.submit .container .submit_content .submit_right .form .form_input .message .contact_message .text textarea {
+  outline: none;
   width: 100%;
   background-color: #fff;
   border: none;
@@ -352,4 +462,126 @@ section.submit .container .submit_content .submit_right .form .btn_contact butto
 section.submit .container .submit_content .submit_right .form .btn_contact button:hover {
   border: 1px solid #b61984;
   transition: all 300ms ease-in-out;
+}
+
+section.contact {
+  background: url(../img/footer_background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 10rem;
+}
+section.contact .container {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+section.contact .container .contact_content .info-1 {
+  animation: fadeIn 1s;
+  transition: all 1s ease;
+}
+section.contact .container .contact_content .info-2 {
+  animation: fadeIn 2s;
+  transition: all 1s ease;
+}
+section.contact .container .contact_content .info-3 {
+  animation: fadeIn 3s;
+  transition: all 1s ease;
+}
+section.contact .container .contact_content .info-4 {
+  animation: fadeIn 4s;
+  transition: all 1s ease;
+}
+section.contact .container .contact_content .info-1 p.menu-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #fff;
+}
+section.contact .container .contact_content .info-1 .icon-text {
+  margin-bottom: 0.25rem;
+}
+section.contact .container .contact_content .info-1 .icon-text span {
+  color: #fff;
+}
+section.contact .container .contact_content .info-1 .icon-text span.info {
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+}
+section.contact .container .contact_content .info-1 .icon-media {
+  margin-top: 1rem;
+}
+section.contact .container .contact_content .info-1 .icon-media span {
+  color: #fff;
+  margin-right: 0.5rem;
+}
+section.contact .container .contact_content .info-2 p.menu-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #fff;
+}
+section.contact .container .contact_content .info-2 ul.menu-list {
+  text-decoration: none;
+  list-style: none;
+}
+section.contact .container .contact_content .info-2 ul.menu-list li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 2;
+}
+section.contact .container .contact_content .info-2 ul.menu-list li a {
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+}
+section.contact .container .contact_content .info-3 p.menu-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #fff;
+}
+section.contact .container .contact_content .info-3 ul.menu-list {
+  text-decoration: none;
+  list-style: none;
+}
+section.contact .container .contact_content .info-3 ul.menu-list li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 2;
+}
+section.contact .container .contact_content .info-3 ul.menu-list li a {
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+}
+section.contact .container .contact_content .info-4 p.menu-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+section.contact .container .contact_content .info-4 .form-contact .email-btn {
+  margin-bottom: 1rem;
+}
+section.contact .container .contact_content .info-4 .form-contact .email-btn span input {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 10px 50px;
+  text-align: center;
+  outline: none;
+  color: #fff;
+}
+section.contact .container .contact_content .info-4 .form-contact .email-btn span input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1;
+  /* Firefox */
+}
+section.contact .container .contact_content .info-4 .form-contact .subscribe-btn input {
+  background-color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 60px;
+  text-align: center;
+  outline: none;
+  font-size: 16px;
+  font-weight: 16px;
+  color: #181818;
 }
