@@ -25,11 +25,13 @@ function myFunction() {
 //         x.style.display = "block";
 //     }
 // }
-document.getElementById('trigger').onclick = function(){
-    var x = document.getElementsByClassName("myLinks");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
+
+document.querySelector('#trigger').onclick = function () {
+    var x = document.querySelector('.myLinks');
+    if (x.style.display == 'none') {
+        x.style.display = 'block'
+    }
+    else {
+        x.style.display = 'none';
     }
 }

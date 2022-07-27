@@ -26,61 +26,62 @@
   padding: 0;
 }
 
-section.top {
-  background: url(../../img/yellow_top_wave_01.png);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 @media only screen and (max-width: 1232px) {
-  section.top .top_wrapper .top_nav {
-    display: block;
+  .top_nav {
+    position: fixed;
+    display: inline-block;
+    z-index: 1;
     background-color: #fff;
+    box-shadow: -2px 10px 54px -11px rgba(0, 0, 0, 0.28);
+    -webkit-box-shadow: -2px 10px 54px -11px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: -2px 10px 54px -11px rgba(0, 0, 0, 0.28);
   }
-  section.top .top_wrapper .top_nav .menu-trigger {
+  .top_nav .menu-trigger {
     display: flex;
     align-items: center;
     background-color: #fff;
   }
-  section.top .top_wrapper .top_nav .menu-trigger .menu-icon {
+  .top_nav .menu-trigger .menu-icon {
     margin-right: 1rem;
     margin-left: 1rem;
   }
-  section.top .top_wrapper .top_nav .menu-trigger .menu-icon a img:hover {
+  .top_nav .menu-trigger .menu-icon #trigger {
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+  .top_nav .menu-trigger .menu-icon #trigger a img:hover {
     cursor: pointer;
   }
-  section.top .top_wrapper .top_nav .myLinks {
+  .top_nav .myLinks {
     display: none;
+    width: max-content;
+    position: relative;
   }
-  section.top .top_wrapper .top_nav .myLinks .Links {
+  .top_nav .myLinks .Links {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25%;
-    padding-bottom: 100%;
-    box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.16);
-    -webkit-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.16);
-    -moz-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.16);
   }
-  section.top .top_wrapper .top_nav .myLinks .Links img {
+  .top_nav .myLinks .Links img {
     margin-right: 0.5rem;
   }
-  section.top .top_wrapper .top_nav .myLinks .Links nav {
+  .top_nav .myLinks .Links nav {
     margin-top: 2rem;
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
   }
-  section.top .top_wrapper .top_nav .myLinks .Links nav a {
+  .top_nav .myLinks .Links nav a {
     text-decoration: none;
     font-size: 18px;
     font-weight: 16px;
     color: #181818;
   }
-  section.top .top_wrapper .top_nav .myLinks .Links .menu-bar .btnTrigger {
+  .top_nav .myLinks .Links .menu-bar .btnTrigger {
     margin-bottom: 0.5rem;
   }
-  section.top .top_wrapper .top_nav .myLinks .Links .menu-bar .btnTrigger button {
+  .top_nav .myLinks .Links .menu-bar .btnTrigger button {
     background-color: #b61984;
     padding: 10px 25px;
     border: none;
@@ -90,39 +91,45 @@ section.top {
     margin-right: 10px;
     transition: all 300ms ease-in-out;
   }
-  section.top .top_wrapper .top_nav .myLinks .Links .menu-bar .btnTrigger button a {
+  .top_nav .myLinks .Links .menu-bar .btnTrigger button a {
     text-decoration: none;
     display: flex;
     align-items: center;
   }
-  section.top .top_wrapper .top_nav .myLinks .Links .menu-bar .btnTrigger button a .btn_icon span {
+  .top_nav .myLinks .Links .menu-bar .btnTrigger button a .btn_icon span {
     color: #fff;
     margin-right: 10px;
     font-size: 13px;
   }
-  section.top .top_wrapper .top_nav .myLinks .Links .menu-bar .btnTrigger button a .btn_text {
+  .top_nav .myLinks .Links .menu-bar .btnTrigger button a .btn_text {
     color: #fff;
     font-size: 13px;
   }
-  section.top .top_wrapper .top_nav .myLinks .Links .menu-bar a {
+  .top_nav .myLinks .Links .menu-bar a {
     margin-left: 1.75rem;
   }
-  section.top .top_wrapper .top_nav .myLinks .Links .menu-bar a span {
+  .top_nav .myLinks .Links .menu-bar a span {
     font-size: 13px;
     font-weight: 16px;
     color: #181818;
   }
-  section.top .top_wrapper #myHeader {
+  #myHeader {
     display: none;
   }
 }
 @media only screen and (min-width: 1233px) {
-  section.top .top_wrapper .top_nav {
+  .top_nav {
     display: none;
   }
-  section.top .top_wrapper #myHeader {
+  #myHeader {
     display: block;
   }
+}
+section.top {
+  background: url(../../img/yellow_top_wave_01.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 section.top .top_wrapper #myHeader .header {
   max-width: 1260px;
